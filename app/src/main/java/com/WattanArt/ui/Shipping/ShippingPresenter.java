@@ -761,6 +761,9 @@ ShippingPresenter<V extends ShippingMvpView> extends BasePresenter<V>
                 mDialog.dismiss();
                 Intent intent = new Intent(coontext, RegisterActivity.class);
                 intent.putExtra(ShippingRegister, true);
+                intent.putExtra(ShippingMobileRegister, false);
+                intent.putExtra(publicShipping, false);
+                intent.putExtra(ShippingFlashRegister, false)
                 ((Activity) coontext).startActivityForResult(intent, OPEN_REGISTERATION_CODE);
 
 //                getMvpView().showMessage("This feature is under developement");
